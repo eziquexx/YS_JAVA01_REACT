@@ -1,0 +1,41 @@
+.inputWrap {
+  width: 100%;
+  position: relative;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  margin: 0 auto 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.inputWrap legend {
+  display: block;
+  padding: 0 20px;
+}
+.inputWrap div.addUserInputWrap {
+  position: relative;
+  width: 70%;
+}
+.inputWrap div.addUserInputWrap > div {
+  position: relative;
+  font-size: 16px;
+  margin: 10px;
+}
+.inputWrap div.addUserInputWrap > div input {
+  width: 80%;
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+}
+
+.inputWrap button.addBtn {
+  width: 30%;
+  font-size: 16px;
+  background-color: #175cfc;
+  border: 1px solid #175cfc;
+  border-radius: 6px;
+  position: relative;
+  margin: 0 auto;
+  color: #fff;
+  cursor: pointer;
+}

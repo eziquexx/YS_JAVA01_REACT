@@ -1,0 +1,26 @@
+input, button
+{
+  padding: 12px;
+  margin: auto;
+}
+input
+{
+  width: 80%;
+}
+button
+{
+  width: 90%;
+  color: white;
+  background-color: rgb(0, 110, 255);
+  border: 0px;
+}
+h2, p
+{
+  text-align: center;
+}
+form
+{
+  width: 300px;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+}

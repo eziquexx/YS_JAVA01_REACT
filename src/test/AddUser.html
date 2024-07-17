@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    * { 
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    ul, li {
+      list-style: none;
+    }
+    form {
+      width: 60%;
+      display: block;
+      margin: 20px auto;
+    }
+    .inputWrap {
+      width: 100%;
+      position: relative;
+      border: 1px solid #ddd;
+      overflow: hidden;
+      margin: 0 auto 10px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .inputWrap legend {
+      display: block;
+      padding: 0 20px;
+    }
+    .inputWrap div.addUserInputWrap {
+      position: relative;
+      width: 70%;
+    }
+    .inputWrap div.addUserInputWrap > div {
+      position: relative;
+      font-size: 16px;
+      margin: 10px;
+    }
+    .inputWrap div.addUserInputWrap > div input {
+      width: 80%;
+      padding: 6px;
+      border-radius: 4px;
+      border: 1px solid #aaa;
+    }
+
+    .inputWrap button#addBtn {
+      width: 30%;
+      font-size: 16px;
+      background-color: #175cfc;
+      border: 1px solid #175cfc;
+      border-radius: 6px;
+      position: relative;
+      margin: 0 auto;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .outputWrap {
+      width: 100%;
+      position: relative;
+      border: 1px solid #ddd;
+      overflow: hidden;
+      margin: 0 auto 10px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .addUserListWrap ul {
+      position: relative;
+      width: 100%;
+      display: flex;
+    }
+    .addUserListWrap ul li {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .addUserListWrap ul li p {
+      width: 86%;
+      display: block;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 6px;
+    }
+    .addUserListWrap ul li button {
+      padding: 6px 10px;
+      background-color: #ff1c1c;
+      border: 1px solid #ba0d0d;
+      border-radius: 4px;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  
+  <form>
+    <fieldset class="inputWrap">
+      <legend>Input User</legend>
+    
+        <div class="addUserInputWrap">
+          <div>
+            <label for="userName">이름 : </label>
+            <input type="text" id="userName">
+          </div>
+          <div>
+            <label for="userName">나이 : </label>
+            <input type="text" id="userName">
+          </div>
+          <div>
+            <label for="userName">직업 : </label>
+            <input type="text" id="userName">
+          </div>
+        </div>
+        <button id="addBtn">추가</button>
+    </fieldset>
+
+    <fieldset class="outputWrap addUserListWrap">
+      <legend>Output User</legend>
+      <ul id="outputListWrap">
+        <!-- <li class="test">
+          <p>test</p>
+          <button id="delBtn">삭제</button>
+        </li> -->
+      </ul>
+    </fieldset>
+  </form>
+
+  <script>
+
+    const aaaa = () => {
+      event.preventDefault();
+      // input값 담기.
+      // let test = [];
+
+      const inputName = document.getElementById('userName');
+      const inputAge = document.getElementById('userAge');
+      const inputJob = document.getElementById('userJob');
+
+      let userName = inputName.value;
+      let userAge = inputAge.value;
+      let userJob = inputJob.value;
+
+      let text = `${userName}, ${userAge}, ${userJob}`;
+
+      const listWrap = document.getElementById('outputListWrap'); //ul
+      const liEle = document.createElement('li');
+      const pEle = document.createElement('p');
+      const btnEle = document.createElement('button');
+
+      listWrap.appendChild(liEle);
+      liWrap.appendChild(pEle);
+      liWrap.appendChild(btnEle);
+
+
+      // function userList(name, age, job){
+      //   this.name = name;
+      //   this.age = age;
+      //   this.job = job;
+      // };
+
+      // test.push(userLIst(name, age, job));
+
+      // delBtn 클릭하면 추가된 list 삭제.
+      // const delBtn = document.getElementById('delBtn');
+      // const outputListWrap = document.getElementById('outputListWrap');
+      // console.log('delBtn', delBtn);
+
+      // delBtn.addEventListener('click', function(){
+      //   outputListWrap.removeChild('li');
+      // });
+     
+    }
+
+    const addBtn = document.getElementById('addBtn');
+    addBtn.addEventListener('click', aaaa);
+    
+  </script>
+</body>
+</html>

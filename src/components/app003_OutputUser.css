@@ -1,0 +1,36 @@
+.outputWrap {
+  width: 100%;
+  position: relative;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  margin: 0 auto 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.addUserListWrap ul {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+.addUserListWrap ul li {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.addUserListWrap ul li p {
+  width: 86%;
+  display: block;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 6px;
+}
+.addUserListWrap ul li button {
+  padding: 6px 10px;
+  background-color: #ff1c1c;
+  border: 1px solid #ba0d0d;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}

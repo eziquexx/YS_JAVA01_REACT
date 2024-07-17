@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-color: #F0F0F0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding:20px;
+      border: 1px solid black;
+      margin:0;
+    }
+    .input-container, .list-container{
+      background-color: white;
+      padding : 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      width:90%;
+      max-width: 500px;
+      margin-bottom: 20px;
+    }
+    .input-container table{
+      width: 100%;
+      border-spacing: 0 10px;
+    }
+    .input-container td{
+      padding: 5px;
+    }
+    .input-container input {
+       width: 95%;
+       padding:8px;
+       border: 1px solid #ccc;
+       border-radius: 4px;
+       box-sizing: border-box;
+    }
+    .input-container button{
+      padding: 10px 15px;
+      background-color: #007BFF;
+      color:white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      height:140px;
+      width:100%;
+    }
+    .input-container button:hover{
+      background-color: #0056B3;
+    }
+    .list-container ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .list-container li{
+      background-color: #F9F9F9;
+      padding:10px;
+      border:1px solid #ddd;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      display:flex;
+      justify-content: space-between;
+      align-items : center;
+    }
+    .list-container button{
+      padding: 10px 15px;
+      background-color: #DC3545;
+      color:white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .list-container button:hover{
+      background-color: #C82333;
+    }
+  </style>
+</head>
+<body>
+  <div class="input-container">
+    <form id="userForm" >
+      <table >
+        <tr>
+          <td>이름</td>
+          <td><input type="text" placeholder="이름" id="nameInput"></td>
+          <td rowspan="3"><button id="addBtn">추가</button></td>
+        </tr>
+        <tr>
+          <td>나이</td>
+          <td><input type="text" placeholder="나이" id="ageInput"></td>
+        </tr>
+        <tr>
+          <td>직업</td>
+          <td><input  type="text" placeholder="직업" id="jobInput"></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <div class="list-container">
+    <ul id="userList">
+      <!-- <li>홍길동(34세) 무직 <button class="delBtn">삭제</button></li>
+      <li>이순신(54세) 군인 <button class="delBtn">삭제</button></li> -->
+    </ul>
+  </div>
+  <script>
+    const addBtn = document.getElementById('addBtn');
+    const nameInput= document.getElementById('nameInput');
+    const ageInput= document.getElementById('ageInput');
+    const jobInput= document.getElementById('jobInput');
+    const userForm= document.getElementById('userForm');
+    const userList= document.getElementById('userList');
+    addBtn.addEventListener('click', (e)=>{
+      e.preventDefault();
+      let _name = nameInput.value;
+      let _age  = ageInput.value;
+      let _job  = jobInput.value;
+      const liEle = document.createElement('li');
+      // <li>홍길동(34세) 무직 <button class="delBtn">삭제</button></li>
+      liEle.textContent = `${_name}(${_age}세) ${_job}`;
+      const btnEle = document.createElement('button');
+      btnEle.textContent = "삭제";
+      btnEle.classList.add('delBtn');
+      btnEle.addEventListener('click', function(){liEle.remove();})
+      liEle.appendChild(btnEle);
+      console.log(liEle);
+      userList.appendChild(liEle);
+      console.log(userList);
+      userForm.reset();
+    });
+  </script>
+</body>
+</html>

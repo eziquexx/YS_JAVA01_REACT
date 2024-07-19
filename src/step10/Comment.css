@@ -1,0 +1,32 @@
+.wrapper {
+  margin: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid grey;
+  border-radius: 16px;
+}
+.image-container {
+  /* 빈 객체였으므로 스타일 없음 */
+  height:50px;
+}
+.image {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+.content-container {
+  margin-left: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.name-text {
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+.comment-text {
+  color: black;
+  font-size: 16px;
+}

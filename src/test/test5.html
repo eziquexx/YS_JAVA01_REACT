@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .wrapper {
+          margin: 8px;
+          padding: 8px;
+          display: flex;
+          flex-direction: row;
+          border: 1px solid grey;
+          border-radius: 16px;
+      }
+      .image-container {
+          /* 빈 객체였으므로 스타일 없음 */
+          height:50px;
+      }
+      .image {
+          width: 50px;
+          height: 50px;
+          border-radius: 25px;
+      }
+      .content-container {
+          margin-left: 8px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+      }
+      .name-text {
+          color: black;
+          font-size: 16px;
+          font-weight: bold;
+      }
+      .comment-text {
+          color: black;
+          font-size: 16px;
+      }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="image-container">
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+                class="image"
+                alt="Profile Image"
+            />
+        </div>
+        <div class="content-container">
+            <span class="name-text">홍길동</span>
+            <span class="comment-text">정말 재미있는 영화였음</span>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="image-container">
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+                class="image"
+                alt="Profile Image"
+            />
+        </div>
+        <div class="content-container">
+            <span class="name-text">홍길동2</span>
+            <span class="comment-text">정말 감동적인 영화였음</span>
+        </div>
+    </div>
+</body>
+</html>

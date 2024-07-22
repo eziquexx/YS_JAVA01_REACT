@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    function handleSubmit(e) {
+      // form 이벤트 제거. (submit 시키는..)
+      e.preventDefault();
+
+      msg = document.getElementById('name').value;
+      alert(msg);
+    }
+
+  </script>
+</head>
+<body>
+  <!-- onsubmit="자바스크립트 함수명" -->
+  <form action="" onsubmit="handleSubmit(event)">
+    <label>
+      요청사항:
+      <textarea id="name">123</textarea>
+    </label>
+    <button type="submit">제출</button>
+  </form>
+</body>
+</html>

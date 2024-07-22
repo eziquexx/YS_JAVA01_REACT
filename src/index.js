@@ -1,5 +1,9 @@
 import ReactDOM from 'react-dom/client';
-import App from './step17/App';
+// import App from './step17/App';
+
+import App from './project-mini-blog/App'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import styled from 'styled-components';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

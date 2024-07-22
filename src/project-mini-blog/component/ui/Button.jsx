@@ -15,3 +15,5 @@ export function Button(props) {
     <StyledButton onClick={onClick}>{title || "button"}</StyledButton>
   );
 }
+
+export default Button;

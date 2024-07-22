@@ -1,14 +1,11 @@
 import ReactDOM from 'react-dom/client';
-// import {App} from './step11/App';
-// import {Example} from './step11/Test1'
-// import { App } from './step12/App';
-// import {App} from './step14/App';
-import App from './myTestGroup/myTest8/App'
+import App from './step17/App';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    {console.log('render')}
+    {/* {console.log('render')} */}
     <App/>
   </>
 );
